@@ -22,7 +22,7 @@ include "../node_modules/circomlib/circuits/comparators.circom";
 
 template Sudoku () {
     // Question Setup 
-    signal input  question[16];
+    signal input  question[16];  
     signal input solution[16];
     signal output out;
     
