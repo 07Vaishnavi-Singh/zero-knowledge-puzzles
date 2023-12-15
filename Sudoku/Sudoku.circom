@@ -2,7 +2,6 @@ pragma circom 2.1.4;
 
 include "../node_modules/circomlib/circuits/comparators.circom";
 
-
 /*
     Given a 4x4 sudoku board with array signal input "question" and "solution", check if the solution is correct.
 
@@ -18,7 +17,6 @@ include "../node_modules/circomlib/circuits/comparators.circom";
 
     "out" is the signal output of the circuit. "out" is 1 if the solution is correct, otherwise 0.                                                                               
 */
-
 
 template Sudoku () {
     // Question Setup 
