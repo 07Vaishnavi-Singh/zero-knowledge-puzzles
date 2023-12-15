@@ -7,7 +7,12 @@ pragma circom 2.1.4;
 
 template Add() {
    // Your code here 
-   
+   signal input a[2];
+   signal output c;
+   signal output sum;
+
+      sum<== a[0]+ a[1] ;
+
 }
 
 component main  = Add();
