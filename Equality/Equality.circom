@@ -12,10 +12,6 @@ template Equality() {
    signal input a[3];
    signal output  c ;
 
-   var res1 ;
-   var res2 ;
-
-   
    component Check1 =  IsEqual();
    Check1.in[0] <== a[0];
    Check1.in[1] <== a[1];
