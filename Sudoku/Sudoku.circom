@@ -74,7 +74,7 @@ template Sudoku () {
 
     // Write your solution from here.. Good Luck!
     
-    
+
    
 }
 

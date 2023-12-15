@@ -15,8 +15,37 @@ pragma circom 2.1.4;
 // Hash all 3 using mimcsponge as a hashing mechanism. 
 // Output the res using 'out'.
 
+include "../node_modules/circomlib/circuits/poseidon.circom" ;
+include "../node_modules/circomlib/circuits/comparators.circom" ;
+
+
 template Salt() {
     // Your code here..
+
+  signal input a ;
+  signal input b ;
+signal input salt ;
+
+signal output out ;
+
+component poseidon1 = Poseidon(2);
+poseidon1.inputs[0] <== a;
+poseidon1.inputs[1] <== salt;
+
+component poseidon2 = Poseidon(2);
+poseidon2.inputs[0] <== b;
+poseidon2.inputs[1] <== salt;
+
+
+ component Check =  IsEqual();
+   Check.in[0] <== poseidon1.out;
+   Check.in[1] <== poseidon2.out;
+   
+
+out <== Check.out;
+
+
+
 }
 
 component main  = Salt();

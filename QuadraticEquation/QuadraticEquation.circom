@@ -13,6 +13,11 @@ template QuadraticEquation() {
     signal input res;   // Expected result of the equation
     signal output out;  // If res is correct , then return 1 , else 0 . 
 
+
+
+
+
+
     // your code here
 }
 
