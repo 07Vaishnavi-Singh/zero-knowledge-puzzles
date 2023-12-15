@@ -8,9 +8,27 @@ pragma circom 2.1.4;
 // If 'a' is within the range, output 1 , else output 0 using 'out'
 
 
+include "../node_modules/circomlib/circuits/comparators.circom" ;
+
 template Range() {
     // your code here
-   
+   signal input a;
+   signal input lowerbound;
+   signal input upperbound;
+   signal output out ;
+
+component lessthan = LessThan(2) ;
+  lessthan.in[0] <== a;
+  lessthan.in[1] <== upperbound ;
+
+component greaterthan = GreaterThan(2) ;
+  greaterthan.in[0] <== a;
+  greaterthan.in[1] <== lowerbound ;
+
+  out <== lessthan.out - greaterthan.out ;
+
+
+
 }
 
 component main  = Range();
