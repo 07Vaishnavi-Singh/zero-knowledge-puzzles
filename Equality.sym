@@ -1,0 +1,16 @@
+1,1,2,main.c
+2,2,2,main.a[0]
+3,3,2,main.a[1]
+4,4,2,main.a[2]
+5,5,1,main.Check1.out
+6,-1,1,main.Check1.in[0]
+7,-1,1,main.Check1.in[1]
+8,-1,0,main.Check1.isz.out
+9,-1,0,main.Check1.isz.in
+10,6,0,main.Check1.isz.inv
+11,7,1,main.Check2.out
+12,-1,1,main.Check2.in[0]
+13,-1,1,main.Check2.in[1]
+14,-1,0,main.Check2.isz.out
+15,-1,0,main.Check2.isz.in
+16,8,0,main.Check2.isz.inv
